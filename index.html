@@ -49,7 +49,35 @@ h2{font-size:36px;margin-bottom:18px}
 .card h3{color:#62d5e8;margin-bottom:12px}
 
 .card p{color:#b7c3d4}
-
+.work-card{
+background:#111f32;
+border:1px solid #26374d;
+border-radius:18px;
+overflow:hidden;
+transition:transform .25s,border-color .25s;
+}
+.work-card:hover{
+transform:translateY(-6px);
+border-color:#62d5e8;
+}
+.work-image{
+height:190px;
+background-size:cover;
+background-position:center;
+}
+.work-content{padding:24px}
+.work-content h3{
+color:#62d5e8;
+margin-bottom:10px;
+}
+.work-content p{color:#b7c3d4}
+.work-link{
+display:inline-block;
+margin-top:16px;
+color:#62d5e8;
+text-decoration:none;
+font-weight:bold;
+}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
 
 .step{padding:22px;border-left:3px solid #62d5e8;background:#101d30}
