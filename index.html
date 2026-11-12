@@ -16,403 +16,101 @@
 
 <style>
 
-* {
+*{box-sizing:border-box;margin:0;padding:0}
 
-  box-sizing: border-box;
+html{scroll-behavior:smooth}
 
-  margin: 0;
+body{font-family:Arial,sans-serif;background:#08111f;color:#f5f7fb;line-height:1.6}
 
-  padding: 0;
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1d2b3e}
 
-}
+.logo{font-size:28px;font-weight:800;letter-spacing:1px;color:#62d5e8}
 
-html {
+nav{display:flex;gap:24px}
 
-  scroll-behavior: smooth;
+nav a{color:#dce5f0;text-decoration:none;font-size:15px}
 
-}
+nav a:hover{color:#62d5e8}
 
-body {
+.hero{padding:105px 8% 95px;max-width:1100px}
 
-  font-family: Arial, sans-serif;
+.tag{color:#62d5e8;font-weight:bold;letter-spacing:2px;font-size:13px}
 
-  background: #08111f;
+h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:20px 0}
 
-  color: #f5f7fb;
+h1 span{color:#62d5e8}
 
-  line-height: 1.6;
+.hero p{font-size:19px;color:#b7c3d4;max-width:620px}
 
-}
+.btn,.whatsapp-btn{display:inline-block;padding:14px 24px;border-radius:9px;text-decoration:none;font-weight:bold;margin-top:28px;transition:.2s}
 
-header {
+.btn{background:#62d5e8;color:#07111e}
 
-  padding: 22px 8%;
+.btn:hover{background:#8be4f0;transform:translateY(-2px)}
 
-  display: flex;
+.whatsapp-btn{background:#25d366;color:#07111e;margin-left:12px}
 
-  justify-content: space-between;
+.whatsapp-btn:hover{background:#55df86;transform:translateY(-2px)}
 
-  align-items: center;
+section{padding:78px 8%}
 
-  border-bottom: 1px solid #1d2b3e;
+h2{font-size:clamp(29px,4vw,38px);margin-bottom:14px}
 
-}
+.sub{color:#aab7c9;margin-bottom:35px;max-width:680px}
 
-.logo {
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 
-  font-size: 28px;
+.card,.work-card{background:#111f32;border:1px solid #26374d;border-radius:15px}
 
-  font-weight: 800;
+.card{padding:28px}
 
-  letter-spacing: 1px;
+.card h3,.work-content h3{color:#62d5e8;margin-bottom:12px}
 
-  color: #62d5e8;
+.card p,.work-content p{color:#b7c3d4}
 
-}
+.work-card{overflow:hidden;transition:.2s}
 
-nav {
+.work-card:hover{transform:translateY(-5px);border-color:#62d5e8}
 
-  display: flex;
+.work-image{height:190px;width:100%;object-fit:cover;display:block}
 
-  gap: 24px;
+.work-content{padding:23px}
 
-}
+.work-content p{min-height:52px}
 
-nav a {
+.work-link{display:inline-block;margin-top:17px;color:#62d5e8;text-decoration:none;font-weight:bold}
 
-  color: #dce5f0;
+.work-link:hover{text-decoration:underline}
 
-  text-decoration: none;
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
 
-  font-size: 15px;
+.step{padding:22px;border-left:3px solid #62d5e8;background:#101d30;border-radius:0 10px 10px 0}
 
-}
+.number{color:#62d5e8;font-size:24px;font-weight:bold}
 
-nav a:hover {
+.contact{background:#101d30;text-align:center}
 
-  color: #62d5e8;
+.contact p{color:#b7c3d4}
 
-}
+footer{padding:25px 8%;text-align:center;color:#8998ac}
 
-.hero {
+@media(max-width:650px){
 
-  padding: 105px 8% 95px;
+header{padding:19px 6%;align-items:flex-start;gap:14px;flex-direction:column}
 
-  max-width: 1100px;
+nav{flex-wrap:wrap;gap:16px}
 
-}
+nav a{font-size:14px}
 
-.tag {
+.hero{padding:75px 6%}
 
-  color: #62d5e8;
+.hero p{font-size:17px}
 
-  font-weight: bold;
+section{padding:60px 6%}
 
-  letter-spacing: 2px;
+.work-image{height:170px}
 
-  font-size: 13px;
-
-}
-
-h1 {
-
-  font-size: clamp(42px, 7vw, 76px);
-
-  line-height: 1.08;
-
-  margin: 20px 0;
-
-}
-
-h1 span {
-
-  color: #62d5e8;
-
-}
-
-.hero p {
-
-  font-size: 19px;
-
-  color: #b7c3d4;
-
-  max-width: 620px;
-
-}
-
-.btn {
-
-  display: inline-block;
-
-  background: #62d5e8;
-
-  color: #07111e;
-
-  padding: 14px 24px;
-
-  border-radius: 9px;
-
-  text-decoration: none;
-
-  font-weight: bold;
-
-  margin-top: 28px;
-
-  transition: .2s;
-
-}
-
-.btn:hover {
-
-  background: #8be4f0;
-
-  transform: translateY(-2px);
-
-}
-
-section {
-
-  padding: 78px 8%;
-
-}
-
-h2 {
-
-  font-size: clamp(29px, 4vw, 38px);
-
-  margin-bottom: 14px;
-
-}
-
-.sub {
-
-  color: #aab7c9;
-
-  margin-bottom: 35px;
-
-  max-width: 680px;
-
-}
-
-.cards {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
-  gap: 20px;
-
-}
-
-.card {
-
-  background: #111f32;
-
-  border: 1px solid #26374d;
-
-  padding: 28px;
-
-  border-radius: 15px;
-
-}
-
-.card h3 {
-
-  color: #62d5e8;
-
-  margin-bottom: 12px;
-
-}
-
-.card p {
-
-  color: #b7c3d4;
-
-}
-
-.work-card {
-
-  background: #111f32;
-
-  border: 1px solid #26374d;
-
-  border-radius: 16px;
-
-  overflow: hidden;
-
-  transition: .2s;
-
-}
-
-.work-card:hover {
-
-  transform: translateY(-5px);
-
-  border-color: #62d5e8;
-
-}
-
-.work-image {
-
-  height: 190px;
-
-  width: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-}
-
-.work-content {
-
-  padding: 23px;
-
-}
-
-.work-content h3 {
-
-  color: #62d5e8;
-
-  margin-bottom: 9px;
-
-}
-
-.work-content p {
-
-  color: #b7c3d4;
-
-  min-height: 52px;
-
-}
-
-.work-link {
-
-  display: inline-block;
-
-  margin-top: 17px;
-
-  color: #62d5e8;
-
-  text-decoration: none;
-
-  font-weight: bold;
-
-}
-
-.work-link:hover {
-
-  text-decoration: underline;
-
-}
-
-.steps {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-
-  gap: 20px;
-
-}
-
-.step {
-
-  padding: 22px;
-
-  border-left: 3px solid #62d5e8;
-
-  background: #101d30;
-
-  border-radius: 0 10px 10px 0;
-
-}
-
-.number {
-
-  color: #62d5e8;
-
-  font-size: 24px;
-
-  font-weight: bold;
-
-}
-
-.contact {
-
-  background: #101d30;
-
-  text-align: center;
-
-}
-
-.contact p {
-
-  color: #b7c3d4;
-
-}
-
-footer {
-
-  padding: 25px 8%;
-
-  text-align: center;
-
-  color: #8998ac;
-
-}
-
-@media(max-width:650px) {
-
-  header {
-
-    padding: 19px 6%;
-
-    align-items: flex-start;
-
-    gap: 14px;
-
-    flex-direction: column;
-
-  }
-
-  nav {
-
-    flex-wrap: wrap;
-
-    gap: 16px;
-
-  }
-
-  nav a {
-
-    font-size: 14px;
-
-  }
-
-  .hero {
-
-    padding: 75px 6%;
-
-  }
-
-  .hero p {
-
-    font-size: 17px;
-
-  }
-
-  section {
-
-    padding: 60px 6%;
-
-  }
-
-  .work-image {
-
-    height: 170px;
-
-  }
+.whatsapp-btn{margin-left:0}
 
 }
 
@@ -424,19 +122,19 @@ footer {
 
 <header>
 
-  <div class="logo">NEXO.</div>
+<div class="logo">NEXO.</div>
 
-  <nav>
+<nav>
 
-    <a href="#servicios">Servicios</a>
+<a href="#servicios">Servicios</a>
 
-    <a href="#trabajos">Ejemplos</a>
+<a href="#trabajos">Ejemplos</a>
 
-    <a href="#proceso">Proceso</a>
+<a href="#proceso">Proceso</a>
 
-    <a href="#contacto">Contacto</a>
+<a href="#contacto">Contacto</a>
 
-  </nav>
+</nav>
 
 </header>
 
@@ -444,225 +142,101 @@ footer {
 
 <div class="hero">
 
-  <div class="tag">DISEÑO WEB · PRESENCIA DIGITAL</div>
+<div class="tag">DISEÑO WEB · PRESENCIA DIGITAL</div>
 
-  <h1>Tu negocio merece una web <span>a su altura.</span></h1>
+<h1>Tu negocio merece una web <span>a su altura.</span></h1>
 
-  <p>
+<p>En Nexo creamos páginas web modernas, atractivas y adaptadas a cada negocio. Haz que tus clientes te encuentren en internet.</p>
 
-    En Nexo creamos páginas web modernas, atractivas y adaptadas
-
-    a cada negocio. Haz que tus clientes te encuentren en internet.
-
-  </p>
-
-  <a class="btn" href="#contacto">Hablemos de tu proyecto →</a>
+<a class="btn" href="#contacto">Hablemos de tu proyecto →</a>
 
 </div>
 
 <section id="servicios">
 
-  <h2>¿Qué podemos hacer por ti?</h2>
+<h2>¿Qué podemos hacer por ti?</h2>
 
-  <p class="sub">
+<p class="sub">Una presencia digital clara, profesional y pensada para ayudarte a conectar con tus clientes.</p>
 
-    Una presencia digital clara, profesional y pensada para ayudarte
+<div class="cards">
 
-    a conectar con tus clientes.
+<div class="card"><h3>Diseño a medida</h3><p>Una web con una imagen cuidada que represente la personalidad de tu negocio.</p></div>
 
-  </p>
+<div class="card"><h3>Adaptada al móvil</h3><p>Tu página se verá bien en móviles, tablets y ordenadores.</p></div>
 
-  <div class="cards">
+<div class="card"><h3>Contacto sencillo</h3><p>Facilitamos que tus clientes puedan escribirte y encontrar tu negocio.</p></div>
 
-    <div class="card">
-
-      <h3>Diseño a medida</h3>
-
-      <p>Una web con una imagen cuidada que represente la personalidad de tu negocio.</p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Adaptada al móvil</h3>
-
-      <p>Tu página se verá bien en móviles, tablets y ordenadores.</p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Contacto sencillo</h3>
-
-      <p>Facilitamos que tus clientes puedan escribirte y encontrar tu negocio.</p>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 <section id="trabajos">
 
-  <h2>Ideas que toman forma</h2>
+<h2>Ideas que toman forma</h2>
 
-  <p class="sub">
+<p class="sub">Estos son ejemplos de estilos de página que podemos preparar para distintos tipos de negocio.</p>
 
-    Estos son ejemplos de estilos de página que podemos preparar
+<div class="cards">
 
-    para distintos tipos de negocio.
+<div class="work-card">
 
-  </p>
+<img class="work-image" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&auto=format&fit=crop" alt="Interior de un restaurante">
 
-  <div class="cards">
+<div class="work-content"><h3>Restaurantes</h3><p>Una web para mostrar tu carta, horarios, ubicación y facilitar reservas.</p><a class="work-link" href="mailto:contactonexowebstudio@gmail.com?subject=Web%20para%20restaurante">Quiero una web →</a></div>
 
-    <div class="work-card">
+</div>
 
-      <img
+<div class="work-card">
 
-        class="work-image"
+<img class="work-image" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900&auto=format&fit=crop" alt="Interior de una tienda">
 
-        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&auto=format&fit=crop"
+<div class="work-content"><h3>Comercios locales</h3><p>Un escaparate digital para presentar tus productos, servicios y novedades.</p><a class="work-link" href="mailto:contactonexowebstudio@gmail.com?subject=Web%20para%20comercio">Quiero una web →</a></div>
 
-        alt="Interior de un restaurante"
+</div>
 
-      >
+<div class="work-card">
 
-      <div class="work-content">
+<img class="work-image" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&auto=format&fit=crop" alt="Espacio de trabajo profesional">
 
-        <h3>Restaurantes</h3>
+<div class="work-content"><h3>Servicios profesionales</h3><p>Una página para explicar tus servicios y recibir consultas de nuevos clientes.</p><a class="work-link" href="mailto:contactonexowebstudio@gmail.com?subject=Web%20profesional">Quiero una web →</a></div>
 
-        <p>Una web para mostrar tu carta, horarios, ubicación y facilitar reservas.</p>
+</div>
 
-        <a class="work-link" href="mailto:contactonexowebstudio@gmail.com?subject=Web%20para%20restaurante">
+</div>
 
-          Quiero una web →
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="work-card">
-
-      <img
-
-        class="work-image"
-
-        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900&auto=format&fit=crop"
-
-        alt="Interior de una tienda"
-
-      >
-
-      <div class="work-content">
-
-        <h3>Comercios locales</h3>
-
-        <p>Un escaparate digital para presentar tus productos, servicios y novedades.</p>
-
-        <a class="work-link" href="mailto:contactonexowebstudio@gmail.com?subject=Web%20para%20comercio">
-
-          Quiero una web →
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="work-card">
-
-      <img
-
-        class="work-image"
-
-        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&auto=format&fit=crop"
-
-        alt="Espacio de trabajo profesional"
-
-      >
-
-      <div class="work-content">
-
-        <h3>Servicios profesionales</h3>
-
-        <p>Una página para explicar tus servicios y recibir consultas de nuevos clientes.</p>
-
-        <a class="work-link" href="mailto:contactonexowebstudio@gmail.com?subject=Web%20profesional">
-
-          Quiero una web →
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <p class="sub" style="margin-top:22px;font-size:14px">
-
-    Ejemplos de demostración, no proyectos de clientes reales.
-
-  </p>
+<p class="sub" style="margin-top:22px;font-size:14px">Ejemplos de demostración, no proyectos de clientes reales.</p>
 
 </section>
 
 <section id="proceso">
 
-  <h2>Así trabajamos</h2>
+<h2>Así trabajamos</h2>
 
-  <p class="sub">Un proceso sencillo y transparente.</p>
+<p class="sub">Un proceso sencillo y transparente.</p>
 
-  <div class="steps">
+<div class="steps">
 
-    <div class="step">
+<div class="step"><div class="number">01</div><h3>Nos conocemos</h3><p>Conocemos tu negocio y lo que necesitas.</p></div>
 
-      <div class="number">01</div>
+<div class="step"><div class="number">02</div><h3>Diseñamos</h3><p>Preparamos una propuesta visual para ti.</p></div>
 
-      <h3>Nos conocemos</h3>
+<div class="step"><div class="number">03</div><h3>Publicamos</h3><p>Tu web estará lista para que te encuentren.</p></div>
 
-      <p>Conocemos tu negocio y lo que necesitas.</p>
-
-    </div>
-
-    <div class="step">
-
-      <div class="number">02</div>
-
-      <h3>Diseñamos</h3>
-
-      <p>Preparamos una propuesta visual para ti.</p>
-
-    </div>
-
-    <div class="step">
-
-      <div class="number">03</div>
-
-      <h3>Publicamos</h3>
-
-      <p>Tu web estará lista para que te encuentren.</p>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 <section class="contact" id="contacto">
 
-  <h2>¿Empezamos?</h2>
+<h2>¿Empezamos?</h2>
 
-  <p>Cuéntanos tu idea y estudiamos cómo podemos ayudarte.</p>
+<p>Cuéntanos tu idea y estudiamos cómo podemos ayudarte.</p>
 
-  <a class="btn" href="mailto:contactonexowebstudio@gmail.com?subject=Quiero%20informacion%20sobre%20una%20web">
+<a class="btn" href="mailto:contactonexowebstudio@gmail.com?subject=Quiero%20informacion%20sobre%20una%20web">Contactar con Nexo →</a>
 
-    Contactar con Nexo →
+<br>
 
-  </a>
+<a class="whatsapp-btn" href="https://wa.me/34641237642?text=Hola%2C%20estoy%20interesado%20en%20crear%20una%20p%C3%A1gina%20web%20para%20mi%20negocio.%20%C2%BFPod%C3%A9is%20darme%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer">Solicitar presupuesto por WhatsApp →</a>
 
 </section>
 
@@ -670,7 +244,7 @@ footer {
 
 <footer>
 
-  © 2026 Nexo Web Studio · Diseño web para negocios
+© 2026 Nexo Web Studio · Diseño web para negocios
 
 </footer>
 
